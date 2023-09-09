@@ -19,6 +19,7 @@ func Run(ctx context.Context, target string, command string, expectedOutput stri
 
 	// run ping
 	go func() {
+		defer close(doneChan)
 		doneChan <- pinger.Run()
 	}()
 
