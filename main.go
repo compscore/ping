@@ -7,7 +7,7 @@ import (
 	"github.com/go-ping/ping"
 )
 
-func Run(ctx context.Context, target string, command string, expectedOutput string, username string, password string) (bool, string) {
+func Run(ctx context.Context, target string, command string, expectedOutput string, username string, password string, options map[string]interface{}) (bool, string) {
 	// create ping
 	pinger, err := ping.NewPinger(target)
 	if err != nil {
