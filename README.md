@@ -6,7 +6,7 @@
 - name:
   release:
     org: compscore
-    repo: mysql
+    repo: ping
     tag: latest
   target:
   weight:
